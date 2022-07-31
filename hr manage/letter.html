@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="letter.css">
+    <title>HR management</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="l">LETTER DESIGNING</div>
+    </div>
+    <div class="main">
+        <button class="bt" id="but1" onclick="toggle()">Offer Letter</button>
+        <button class="bt" id="but2" onclick="toggle2()">Relieving Letter</button>
+        <button class="bt" id="but3" onclick="toggle3()">Appraisel Letter</button>
+    </div>
+    <div id="form">
+        <div id="f1">
+           <div class="int1"> Employee Name<input type="text" class="input1" id="i1"> </div>
+           <div class="int1"> Company Name<input type="text" class="input1"  id="i2"></div>
+           <div class="int1"> Job Title<input type="text" class="input1" id="i3"></div>
+           <div class="int1"> Manager Name<input type="text" class="input1" id="i4"></div>
+           <div class="int1"> Employee Joining Date<input type="date" class="input1" id="i5"></div>
+           <div class="int1"> Acceptence Last Date<input type="date" class="input1" id="i6"></div>
+           <div class="int1"> HR Name <input type="text" class="input1" id="i7"></div>
+           <div class="int1"> CTC <input type="integer" class="input1" id="i8"></div>
+           <div class="int1"> <button  class="submit1" onclick="fun()">Submit</button></div>
+        </div>
+    </div>
+    <div id="form">
+        <div id="f2">
+           <div class="int1"> Employee Name<input type="text" class="input1" id="ii1"> </div>
+           <div class="int1"> Company Name<input type="text" class="input1" id="ii2"></div>
+           <div class="int1"> Employee Designation<input type="text" class="input1" id="ii3"></div>
+           <div class="int1"> Employee Joining Date<input type="date" class="input1" id="ii4"></div>
+           <div class="int1"> Employee Resignation Date<input type="date" class="input1" id="ii5"></div>
+           <div class="int1"> Employee Relieving Date<input type="date" class="input1" id="ii6"></div>
+           <div class="int1"> HR Name <input type="text" class="input1" id="ii7"></div>
+           <div class="int1"> HR Designation <input type="text" class="input1" id="ii8"></div>
+           <div class="int1"> <button  class="submit1">Submit</button></div>
+        </div>
+    </div>
+    <div id="form">
+        <div id="f3">
+           <div class="int1"> Employee Name<input type="text" class="input1"> </div>
+           <div class="int1"> Employee Id<input type="text" class="input1"></div>
+           <div class="int1"> Company Name<input type="text" class="input1"></div>
+           <div class="int1"> Employee Designation<input type="text" class="input1"></div>
+           <div class="int1"> Appraisal Date<input type="date" class="input1"></div>
+           <div class="int1"> Revised CTC<input type="integer" class="input1"></div>
+           <div class="int1"> HR Name <input type="text" class="input1"></div>
+           <div class="int1"> HR Designation <input type="text" class="input1"></div>
+           <div class="int1"> <button  class="submit1" onclick="fun()">Submit</button></div>
+        </div>
+    </div>
+<script>
+    function toggle(){
+        let fone = document.getElementById('f1');
+        let ftwo = document.getElementById('f2');
+        let fthree = document.getElementById('f3')
+        fone.style.opacity = '100%';
+        ftwo.style.opacity = '0%';
+        fthree.style.opacity = '0%';
+        fone.style.zIndex = '1';
+        ftwo.style.zIndex = '-1';
+        fthree.style.zIndex = '-1';
+    }
+    function toggle2(){
+        let ftwo = document.getElementById('f2');
+        let fone = document.getElementById('f1');
+        let fthree = document.getElementById('f3');
+        ftwo.style.opacity = '100%';
+        fone.style.opacity = '0%';
+        fthree.style.opacity = '0%';
+        ftwo.style.zIndex = '1';
+        fone.style.zIndex = '0';
+        fthree.style.zIndex = '0';
+    }
+    function toggle3(){
+        let ftwo = document.getElementById('f2');
+        let fone = document.getElementById('f1');
+        let fthree = document.getElementById('f3');
+        ftwo.style.opacity = '0%';
+        fone.style.opacity = '0%';
+        fthree.style.opacity = '100%';
+        ftwo.style.zIndex = '0';
+        fone.style.zIndex = '0';
+        fthree.style.zIndex = '1';
+    }
+    function fun(){
+            let b = document.getElementById("i2").value;
+            let a = document.getElementById("i1").value;
+            let c = document.getElementById("i3").value;
+            let d = document.getElementById("i4").value;
+            let e = document.getElementById("i5").value;
+            let f = document.getElementById("i6").value;
+            let g= document.getElementById("i7").value;
+            let h= document.getElementById("i8").value;
+            document.getElementById("f1").style.width = "max-content"
+            document.getElementById("f1").style.marginLeft = "20em"
+            document.getElementById("f1").innerHTML = "Dear " + a + ", <br> <br>" + "Congratulations We are pleased to tell you that you have been sleceted to work for " + b + ". We are delighted to <br> make you the following job offer. <br><br> The position we are offering you is that of " + c + 
+            " with an annual cost to company of " + h + "inr. This positon reports to <br>" + d + ".<br><br>We would like you to start work on " + e + ".Please report to " + d + " for documentation <br> and orientation. If this data is not acceptable,please contact me immediately. On joining, you'll be invited to our HR tool <br> in which you'll be required to upload your documents. <br><br>Please sign the enclosed copy of this letter and return it to me by " + f + 
+            " to indicate your acceptence of this <br>offer.<br><br>We are confident you will be able to make a signficant contribution to the success of " + b + " and look forward to <br>working with you.<br><br>Sincerely.<br><br>" + g + "<br>" + b + "<br><br><br><br>Accepted by.<br>" + a + ".";
+
+           
+        }
+
+
+</script>
+<script></script>
+</body>
